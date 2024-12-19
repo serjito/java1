@@ -20,4 +20,5 @@ public class ExceptionHandlerController {
 
         return ResponseEntity.status(gameException.getHttpStatus()).body(errorResponse);
     }
+
 }

@@ -2,8 +2,16 @@ package com.example.game_service.services;
 
 import com.example.game_service.commons.entities.Game;
 
-public interface GameService {
-    Game saveGame(Game gameRequest);
+import java.util.List;
 
-    Game getGameByID(String id);
+public interface GameService {
+  Game saveGame(Game gameRequest);
+
+  Game getGameByID(String id);
+
+  List<Game> getAllGames();
+
+  Game updateGame(String id, Game gameRequest);
+
+  void deleteGameById(String id);
 }
