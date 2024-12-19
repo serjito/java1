@@ -33,7 +33,7 @@ public class GameServicesImpl implements GameService {
 
     @Override
     public Game updateGame(String id, Game gameRequest) {
-        Game existingGame = this.getGameByID(id); // Lanza GameException si no encuentra el juego
+        Game existingGame = this.getGameByID(id);
         existingGame.setName(gameRequest.getName());
         return this.gameRepository.save(existingGame);
     }
@@ -41,7 +41,7 @@ public class GameServicesImpl implements GameService {
 
     @Override
     public void deleteGameById(String id) {
-        Game existingGame = this.getGameByID(id); // Lanza GameException si no encuentra el juego
+        Game existingGame = this.getGameByID(id);
         this.gameRepository.delete(existingGame);
     }
 
